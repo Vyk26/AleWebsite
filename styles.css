@@ -128,6 +128,8 @@ align-items: center;
     flex-direction: column-reverse;
     align-items: center;
     gap: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .menu {
@@ -137,5 +139,9 @@ align-items: center;
 
   .spacer {
     display: none;
+  }
+
+  .logo-icon {
+    width: 100px;
   }
 }
