@@ -7,6 +7,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .wrapper {
@@ -42,20 +43,72 @@ header {
 
 .cartonase {
   background-color: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
+  border-radius: 1rem; /* was 0rem */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* deeper shadow */
+  padding: 2rem; /* slightly more spacing */
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.cartonase h2 {
-  color: #000000;
-  font-size: 1.5rem;
+.cartonase:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.cartonase-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.cartonase-link:hover {
+  transform: scale(1.03);
 }
 
 .cartonase ul {
   list-style-type: disc;
   padding-left: 1.5rem;
   margin-top: 0.5rem;
+}
+
+.cart_prezentare {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #555555;
+}
+
+.container h1{
+  display: flex;
+  font-size: 1.7rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.container p{
+  display: inline;
+  padding: 4px 8px;
+  border-radius: 15px;
+  outline: 2px solid #000000;
+  outline-offset: 7px;
+  background-color: #fff;
+}
+
+.container p {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  outline: none;
+  background-color: #000000;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.container p:hover {
+  background-color: #419d46;
 }
 
 footer {
@@ -88,14 +141,17 @@ left: 50%;
 transform: translateX(-50%);
 }
 
-.menu a{
-
+.menu a {
   text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #1f2937;
+  transition: color 0.3s ease;
 }
 
-.menu a:hover{
-
-text-decoration: underline;
+.menu a:hover {
+  color: #58801d;
+  text-decoration: none;
 }
 
 .nav-container {
@@ -119,8 +175,28 @@ width: 140px;
 
 .title {
 display: flex;
-justify-content: center;
+flex-direction: column;
 align-items: center;
+padding-top: 3rem;
+font-size: 1.1rem;
+}
+
+.subtitlu{
+  position: relative;
+  bottom: 25px;
+  display: flex;
+  justify-content: center;
+  color: green;
+  font-size: 2.5rem;
+}
+
+.subtitlu2{
+  position: relative;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  color: gray;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 480px) {
